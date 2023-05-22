@@ -1,0 +1,232 @@
+:root 
+{
+    --black: #111111;
+    --red: #fe4655;
+    --dark-blue: #0f1923;
+    --white: #ebe7e0;
+}
+* 
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.inactive
+{
+    display: none;
+}
+body 
+{
+    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+    font-family: monospace;
+}
+.divPadre 
+{
+    background-color: var(--dark-blue);
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    justify-content: space-between;
+}
+.derecha 
+{
+    background-color: var(--dark-blue);
+    width: 29%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1%;
+    border-left: 1px solid var(--white);
+    flex-direction: column;
+}
+.contenido 
+{
+    /* background-color: aqua; */
+    width: 100%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.encriptacion 
+{
+    /* font-size: 18px;
+    margin: 25% 10%;
+    color: var(--white);
+    word-wrap: break-word;
+    max-height: 100vh; */
+    margin: 10%;
+    border: 1px solid transparent;
+    background-color: transparent;
+    color: var(--white);
+    width: 80%;
+    border: none;
+    resize: none;
+    outline: none;
+    font-size: 24px;
+    height: 70%;
+}
+.izquierda 
+{
+    border-radius: 1%;
+    background-color: var(--dark-blue);
+    height: 100%;
+    width: 69%;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid var(--white);
+}
+.arriba 
+{
+    height: 80vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.textoEntrada
+{
+    margin: 10%;
+    border: 1px solid transparent;
+    background-color: transparent;
+    color: var(--white);
+    width: 80%;
+    border: none;
+    resize: none;
+    outline: none;
+    font-size: 24px;
+    height: 80%;
+}
+.textoEntrada:focus 
+{
+    outline: none;
+}
+.textoEntrada:active 
+{
+    outline: none;
+}
+.textoEntrada::placeholder 
+{
+    color: var(--white);
+}
+.abajo 
+{
+    width: 100%;
+    height: 20vh;
+    background-color: var(--dark-blue);
+    border-top: 1px solid var(--white);
+}
+.botones 
+{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.botones button 
+{
+    width: 25%;
+    height: 50%;
+    background-color: var(--dark-blue);
+    color: var(--white);
+    font-size: 1rem;
+    border: 1px solid var(--white);
+    border-radius: 10px;
+}
+.botones button:hover 
+{
+    color: var(--red);
+    transition-timing-function: ease-in-out;
+    transition: 0.3s;
+    font-size: 0.8rem;
+    background-color: var(--white);
+    cursor: pointer;
+}
+.error-msg
+{
+    color: var(--red);
+    font-size: 18px;
+    margin: 10%;
+}
+
+.copiar
+{
+    background-color: var(--dark-blue);
+    color: var(--white);
+    font-size: 1rem;
+    border: 1px solid var(--white);
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+}
+.copiar:hover 
+{
+    color: var(--red);
+    transition-timing-function: ease-in-out;
+    transition: 0.3s;
+    font-size: 0.8rem;
+    background-color: var(--white);
+    cursor: pointer;
+}
+.copyBtnContainer
+{
+    border-top: 1px solid var(--white);
+    height: 20%;
+    width: 100%;
+}
+
+.boton-inactivo {
+    background-color: var(--white); /* Cambia el color de fondo del botón */
+    color: var(--red); /* Cambia el color del texto del botón */
+    cursor: not-allowed; /* Cambia el cursor cuando el botón está inactivo */
+    opacity: 0.5; /* Reduce la opacidad del botón */
+    pointer-events: none; /* Deshabilita eventos del mouse en el botón */
+  }
+
+@media (max-width: 640px) 
+{
+    .divPadre 
+    {
+        flex-direction: column;
+    }
+    .izquierda 
+    {
+        width: 100%;
+        height: 80%;
+        border-right: none;
+        border-bottom: 1px solid var(--white);
+    }
+    .derecha 
+    {
+        height: 100%;
+        width: 100%;
+        border-left: none;
+        border-top: 1px solid var(--white);
+    }
+    .contenido 
+    {
+        width: 100%;
+    }
+    .encriptacion 
+    {
+        margin: 5%;
+    }
+}
+@media (max-width: 405px) 
+{
+    .botones {
+        justify-content: space-between;
+    }
+    .botones button 
+    {
+        margin: 0 5%;
+        width: 50%;
+    }
+    .encriptacion 
+    {
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+}
